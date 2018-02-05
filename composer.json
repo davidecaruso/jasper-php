@@ -25,10 +25,10 @@
         "require-jasper-starter": [
             "bash ./scripts/require-jasper-starter.sh"
         ],
-        "post-install-cmd": [
+        "post-package-install": [
             "@require-jasper-starter"
         ],
-        "post-update-cmd": [
+        "post-package-update": [
             "@require-jasper-starter"
         ]
     }
