@@ -23,13 +23,7 @@
     },
     "scripts": {
         "require-jasper-starter": [
-            "php -r \"exec('./scripts/require-jasper-starter.sh');\""
-        ],
-        "post-package-install": [
-            "@require-jasper-starter"
-        ],
-        "post-package-update": [
-            "@require-jasper-starter"
+            "./scripts/require-jasper-starter.sh"
         ]
     }
 }
