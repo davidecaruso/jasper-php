@@ -10,8 +10,8 @@ $ composer require davidecaruso/jasper-php
 This automatically installs and provides the [Jasper Starter](http://jasperstarter.cenote.de/) executable and the [MySQL Connector Driver](https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-installing.html). You can also pass to the library's constructor your **jasperstarter** file's path.
 
 ## Requirements
-- PHP ^7.0
-- Java ^1.8.0
+- PHP >= 7.0
+- Java >= 1.8.0
 - Jasper Starter (automatically provided by the Composer installation)
 
 ## Usage
