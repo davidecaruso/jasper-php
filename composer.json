@@ -19,16 +19,16 @@
         }
     },
     "require": {
-        "php": "^7.0"
+        "php": ">=7.0.0"
     },
     "scripts": {
         "require-jasper-starter": [
-            "./scripts/require-jasper-starter.sh"
+            "bash ./scripts/require-jasper-starter.sh"
         ],
-        "post-package-install": [
+        "post-install-cmd": [
             "@require-jasper-starter"
         ],
-        "post-package-update": [
+        "post-update-cmd": [
             "@require-jasper-starter"
         ]
     }
