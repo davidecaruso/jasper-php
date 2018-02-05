@@ -4,53 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2789cee2e121bf357abe23ae2e30faa6",
-    "packages": [
-        {
-            "name": "jaspersoft/rest-client",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jaspersoft/jrs-rest-php-client.git",
-                "reference": "017f081101b8f8c1a7ba15b65a89694d8c53bd2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jaspersoft/jrs-rest-php-client/zipball/017f081101b8f8c1a7ba15b65a89694d8c53bd2c",
-                "reference": "017f081101b8f8c1a7ba15b65a89694d8c53bd2c",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Jaspersoft": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Jaspersoft",
-                    "email": "code@jaspersoft.com"
-                }
-            ],
-            "description": "A client for the JasperReports Server REST API",
-            "homepage": "http://github.com/Jaspersoft/jrs-rest-php-client",
-            "keywords": [
-                "jasper-reports",
-                "jasperreports",
-                "jaspersoft",
-                "reporting"
-            ],
-            "time": "2014-05-27T21:10:25+00:00"
-        }
-    ],
+    "content-hash": "007182cd77883aacf5f3e430e01cc581",
+    "packages": [],
     "packages-dev": [
         {
             "name": "behat/gherkin",
@@ -2878,6 +2833,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }

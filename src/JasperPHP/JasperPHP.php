@@ -12,8 +12,7 @@ namespace JasperPHP;
  */
 class JasperPHP
 {
-    const EXECUTABLE = __DIR__ . '/../../lib/jasperstarter/bin/jasperstarter';
-
+    protected $executable;
     protected $command;
     protected $formats = [
         'pdf',
@@ -32,6 +31,20 @@ class JasperPHP
     ];
 
     /**
+     * JasperPHP constructor.
+     *
+     * @param $executable
+     */
+    public function __construct(?string $executable = null)
+    {
+        if (!is_null($executable) && is_file($executable)) {
+            $this->executable = $executable;
+        } else {
+            $this->executable = __DIR__ . '/../../lib/jasperstarter/bin/jasperstarter';
+        }
+    }
+
+    /**
      * Compile a jrxml file into a jasper file
      *
      * @param string      $input  Path of jrxml file (e.g. /path/to/input.jrxml).
@@ -41,7 +54,7 @@ class JasperPHP
      */
     public function compile(string $input, ?string $output = null): JasperPHP
     {
-        $this->command = self::EXECUTABLE . " compile \"{$input}\"" . ($output ? " -o \"{$output}\"" : '');
+        $this->command = "{$this->executable} compile \"{$input}\"" . ($output ? " -o \"{$output}\"" : '');
         return $this;
     }
 
@@ -73,8 +86,7 @@ class JasperPHP
                 }
             }
 
-            $this->command = self::EXECUTABLE . " process \"{$input}\"" . ($output ? " -o \"{$output}\"" : '');
-
+            $this->command = "{$this->executable} process \"{$input}\"" . ($output ? " -o \"{$output}\"" : '');
             $this->command .= ' -f ' . implode(' ', $formats);
 
             if (count($parameters) > 0) {
