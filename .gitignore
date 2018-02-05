@@ -1,0 +1,4 @@
+.idea/
+vendor/
+lib/**/*
+!lib/.gitkeep

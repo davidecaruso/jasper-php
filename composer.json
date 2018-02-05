@@ -1,0 +1,36 @@
+{
+    "name": "davidecaruso/jasper-php",
+    "description": "PHP library to execute Jasper Reports",
+    "type": "library",
+    "require-dev": {
+        "codeception/codeception": "^2.3",
+        "codeception/aspect-mock": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Davide Caruso",
+            "email": "davide.caruso93@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JasperPHP\\": "src/JasperPHP/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "jaspersoft/rest-client": "^2.0"
+    },
+    "scripts": {
+        "require-jasper-starter": [
+            "./scripts/require-jasper-starter.sh"
+        ],
+        "post-install-cmd": [
+            "@require-jasper-starter"
+        ],
+        "post-update-cmd": [
+            "@require-jasper-starter"
+        ]
+    }
+}
