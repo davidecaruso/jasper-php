@@ -19,17 +19,16 @@
         }
     },
     "require": {
-        "php": "^7.0",
-        "jaspersoft/rest-client": "^2.0"
+        "php": "^7.0"
     },
     "scripts": {
         "require-jasper-starter": [
             "./scripts/require-jasper-starter.sh"
         ],
-        "post-install-cmd": [
+        "post-package-install": [
             "@require-jasper-starter"
         ],
-        "post-update-cmd": [
+        "post-package-update": [
             "@require-jasper-starter"
         ]
     }

@@ -25,31 +25,25 @@ class JasperPHPTest extends \Codeception\Test\Unit
         $this->assertTrue($this->sut instanceof JasperPHP);
     }
 
-    public function testFoo()
+    public function testCanCompileFromJrxmlToJasper()
     {
-        var_dump($this->sut->listParameters(self::DATA_PATH . '/report.jrxml')->execute());
-        die();
+        $this->sut->compile(self::DATA_PATH . '/report.jrxml')->execute();
+        $this->assertTrue(is_file(self::DATA_PATH . '/report.jasper'));
     }
-    //
-    //public function testCanCompileFromJrxmlToJasper()
-    //{
-    //    $this->sut->compile(self::DATA_PATH . '/report.jrxml')->execute();
-    //    $this->assertTrue(is_file(self::DATA_PATH . '/report.jasper'));
-    //}
-    //
-    //public function testGenerateReportFromJson()
-    //{
-    //    $this->sut->process(
-    //        self::DATA_PATH . '/report.jasper',
-    //        null,
-    //        ['csv'],
-    //        [],
-    //        [
-    //            'driver' => 'json',
-    //            'json_query' => 'data',
-    //            'data_file' => self::DATA_PATH . '/data.json'
-    //        ]
-    //    )->execute();
-    //    $this->assertTrue(is_file(self::DATA_PATH . '/report.csv'));
-    //}
+
+    public function testGenerateReportFromJson()
+    {
+        $this->sut->process(
+            self::DATA_PATH . '/report.jasper',
+            null,
+            ['csv'],
+            [],
+            [
+                'driver' => 'json',
+                'json_query' => 'data',
+                'data_file' => self::DATA_PATH . '/data.json'
+            ]
+        )->execute();
+        $this->assertTrue(is_file(self::DATA_PATH . '/report.csv'));
+    }
 }
