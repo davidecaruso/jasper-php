@@ -80,7 +80,7 @@ $jasper->compile('path/to/report.jrxml')->execute();
 ```
 
 ## Author
-[Davide Caruso](https://it.linkedin.com/in/davidecaruso93)
+[Davide Caruso](https://davidecaruso.github.io)
 
 ## License
 Licensed under [MIT](https://opensource.org/licenses/mit-license.php).
